@@ -14,4 +14,6 @@ Open `http://localhost:8000`. Serving the files is required for JavaScript ES mo
 
 ## GitHub Pages
 
-This project has not been deployed from this workspace. To publish it as its own GitHub Pages site, commit these files at the root of a GitHub repository, push the desired branch, then select **Settings → Pages → Deploy from a branch**, choose that branch and its `/ (root)` folder, and save. GitHub Pages serves the static files directly; no build action or dependencies are needed.
+Live site: <https://nandhini728.github.io/umbra/>.
+
+GitHub Pages publishes the `main` branch from the repository root. The project is served as static files directly; no build action or dependencies are needed.
