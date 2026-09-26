@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0e1a">
+  <meta name="description" content="UMBRA is a light-and-shadow puzzle platformer.">
+  <title>UMBRA | Light makes you real</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell" aria-label="UMBRA puzzle platformer">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="UMBRA home">UMBRA<span> / </span>01</a>
+      <div class="topbar-note"><span class="live-dot"></span> A LIGHT & SHADOW STUDY</div>
+      <button class="icon-button" id="pause-button" type="button" aria-label="Pause game" title="Pause (Escape)" hidden>
+        <span class="pause-glyph" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <section class="stage-wrap" aria-label="Game area">
+      <canvas id="game-canvas" width="960" height="600" aria-label="UMBRA game canvas"></canvas>
+
+      <div class="hud" id="hud" hidden>
+        <div class="room-label"><span class="hud-kicker" id="room-index">ROOM 01</span><span id="room-name">The First Light</span></div>
+        <div class="hud-stats"><span id="timer">00:00</span><span class="stat-divider"></span><span><b id="move-count">0</b> MOVES</span><span class="stat-divider"></span><span><b id="reset-count">0</b> RESET</span></div>
+        <div class="progress-dots" id="progress-dots" aria-label="Room progress"></div>
+        <div class="state-indicator" id="state-indicator"><span></span><b>PHANTOM</b></div>
+      </div>
+
+      <section class="screen start-screen" id="start-screen" aria-labelledby="title">
+        <div class="start-light" aria-hidden="true"></div>
+        <div class="start-content">
+          <div class="eyebrow"><span></span> A PUZZLE PLATFORMER</div>
+          <h1 id="title">UMBRA</h1>
+          <p>Light makes you real. Shadow keeps you safe.</p>
+          <button class="primary-button" id="begin-button" type="button"><span>Begin</span><i aria-hidden="true">↗</i></button>
+        </div>
+        <div class="screen-foot"><span>01—07</span><span>MOVE BETWEEN WORLDS</span><span>© UMBRA</span></div>
+      </section>
+
+      <section class="screen message-screen" id="instruction-screen" aria-labelledby="instructions-title" hidden>
+        <div class="message-panel">
+          <div class="eyebrow"><span></span> BEFORE YOU ENTER</div>
+          <h2 id="instructions-title">Two states.<br>One way forward.</h2>
+          <p>Move: <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrow keys<br>Aim the lamp with your mouse.<br><b>In light</b> you are Solid. <b>In shadow</b> you are Phantom.</p>
+          <button class="primary-button" id="instruction-continue" type="button"><span>Enter the room</span><i aria-hidden="true">↗</i></button>
+        </div>
+      </section>
+
+      <section class="screen message-screen" id="pause-screen" aria-labelledby="pause-title" hidden>
+        <div class="message-panel compact-panel">
+          <div class="eyebrow"><span></span> TAKE YOUR TIME</div>
+          <h2 id="pause-title">Paused.</h2>
+          <p>The light is waiting.</p>
+          <button class="primary-button" id="resume-button" type="button"><span>Resume</span><i aria-hidden="true">↗</i></button>
+        </div>
+      </section>
+
+      <section class="screen message-screen" id="victory-screen" aria-labelledby="victory-title" hidden>
+        <div class="message-panel victory-panel">
+          <div class="eyebrow"><span></span> CONVERGENCE COMPLETE</div>
+          <h2 id="victory-title">All things<br>meet in light.</h2>
+          <div class="victory-stats"><span><small>TIME</small><b id="final-time">00:00</b></span><span><small>RESETS</small><b id="final-resets">0</b></span><span><small>RATING</small><b id="final-rating">★★★</b></span></div>
+          <div class="victory-actions">
+            <button class="primary-button" id="play-again-button" type="button"><span>Play again</span><i aria-hidden="true">↗</i></button>
+            <button class="quiet-button" type="button" disabled>Next level pack <span>COMING SOON</span></button>
+          </div>
+        </div>
+      </section>
+      <div class="transition-shade" id="transition-shade" aria-hidden="true"></div>
+    </section>
+    <footer class="bottom-bar"><span>FIND THE EDGE OF YOURSELF</span><span class="bottom-center">UMBRA <i>●</i> LIGHT / SHADOW</span><span>ESC <b>PAUSE</b></span></footer>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
